@@ -21,3 +21,8 @@ Design system developed during RocketSeat Ignite Lab through 12/10/22 to 12/12/2
 ## Pattern
 
 - Composition Pattern in TextInput
+
+## Deploy
+
+- Github Action workflow
+- Application deployed using Storybook-deployer to Github Pages
