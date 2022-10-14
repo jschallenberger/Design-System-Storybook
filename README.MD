@@ -1,3 +1,11 @@
+# Design System
+
+Design system developed during RocketSeat Ignite Lab through 12/10/22 to 12/12/22 
+
+## Figma Design System
+
+[Click here](https://www.figma.com/file/rMrLRISyr9UTfZlwxPwiPG/Ignite-Lab-Design-System?node-id=0%3A1)
+
 ## Tooling
 
 - Tailwindcss
