@@ -6,6 +6,10 @@ Design system developed during RocketSeat Ignite Lab through 12/10/22 to 12/12/2
 
 [Click here](https://www.figma.com/file/rMrLRISyr9UTfZlwxPwiPG/Ignite-Lab-Design-System?node-id=0%3A1)
 
+## Storybook
+
+[Click here](https://jschallenberger.github.io/Design-System-Storybook/?path=/story/components-heading--default)
+
 ## Tooling
 
 - Tailwindcss
