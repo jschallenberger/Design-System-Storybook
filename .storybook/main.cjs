@@ -18,7 +18,7 @@ module.exports = {
   typescript: { reactDocgen: 'none' },
   viteFinal: (config, { configType }) => {
     if (configType === 'PRODUCTION'){
-      config.base= '/design-system-storybook/'
+      config.base= '/Design-System-Storybook/'
     }
 
     return config
