@@ -30,3 +30,8 @@ Design system developed during RocketSeat Ignite Lab through 12/10/22 to 12/12/2
 
 - Github Action workflow
 - Application deployed using Storybook-deployer to Github Pages
+
+## Run locally
+
+`npm i` <br>
+`npm run storybook`
