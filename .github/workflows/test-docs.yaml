@@ -9,7 +9,7 @@ on:
         default: "test"
 
 jobs:
-  build-and-deploy:
+  run-tests:
     runs-on: ubuntu-latest
     env:
       NODE_OPTIONS: --max-old-space-size=6144
@@ -27,7 +27,7 @@ jobs:
     - name: Install dependencies w/o changing -lock.json
       run: npm ci --legacy-peer-deps
 
-    - name:
+    - name: Build
       run: npm run build-storybook
 
     - name: Test  
@@ -37,8 +37,8 @@ jobs:
         port: 6006
         no-cache: false
         index-files: |
-          ["index.html", "index.htm"]
-        allowed-methods: |
+         ["index.html", "index.htm"]
+        allowed-methods: | 
           ["GET", "HEAD","POST"]
         content-types: |
           {
@@ -56,3 +56,5 @@ jobs:
             "xml": "text/xml",
             "svg": "image/svg+xml"
           }
+    - name: Run tests
+      run: npm run test-storybook
