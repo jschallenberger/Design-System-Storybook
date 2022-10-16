@@ -37,4 +37,5 @@ Design system developed during RocketSeat Ignite Lab through 12/10/22 to 12/12/2
 ## Run locally
 
 `npm i` <br>
-`npm run storybook`
+`npm run storybook`  # To run storybook <br>
+`npm run dev`  # To run React App
