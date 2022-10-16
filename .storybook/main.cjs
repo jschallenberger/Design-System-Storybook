@@ -13,8 +13,12 @@ module.exports = {
   "core": {
     "builder": "@storybook/builder-vite"
   },
+  "staticDirs":[
+    "../public"
+  ],
   "features": {
-    "storyStoreV7": true
+    "storyStoreV7": true,
+    "interactionsDebugger": true,
   },
   typescript: { reactDocgen: 'none' },
   viteFinal: (config, { configType }) => {
