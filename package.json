@@ -11,7 +11,7 @@
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "test-storybook": "test-storybook",
-    "test-storybook:ci": "concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\" \"npx http-server /Design-System-Storybook/ --port 6006 --silent\" \"wait-on tcp:6006 && npm run test-storybook\""
+    "test-storybook:ci": "concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\" \"npx http-server /Design-System-Storybook/storybook-static --port 6006 --silent\" \"wait-on tcp:6006 && npm run test-storybook\""
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.0.0",
