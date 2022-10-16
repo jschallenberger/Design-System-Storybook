@@ -15,6 +15,9 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
+    - run: echo "💡 The ${{ github.path }} "
+    - run: echo "💡 The ${{ runner.temp }} "
+    - run: echo "💡 The ${{ github.workspace }} "
 
     - name: Setup NodeJS
       uses: actions/setup-node@v3
@@ -30,8 +33,6 @@ jobs:
     - name: Deploy Storybook
       run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
 
-    - run: echo "💡 The ${{ github.path }} "
-    - run: echo "💡 The ${{ runner.temp }} "
     - name: Run Storybook tests
       run: npm run test-storybook:ci
       
