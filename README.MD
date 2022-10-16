@@ -18,9 +18,12 @@ Design system developed during RocketSeat Ignite Lab through 12/10/22 to 12/12/2
     - import { Meta, StoryObj } from '@storybook/react' `It helps with ESLint`
     - Decorators
     - arg & argTypes
+    - a11y - Accessibility Addon that run tests in our components
 - CLSX - Create css conditions/variants
     - Example in Text.tsx text-sm, text-md, text-lg
 - Radix UI - Slot which enables dynamics HTML Elements
+- Transform.tools - Convert SVG to React Component
+
 
 ## Pattern
 
