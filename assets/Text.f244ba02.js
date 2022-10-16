@@ -1,0 +1,2 @@
+var r=Object.defineProperty;var o=(t,m)=>r(t,"name",{value:m,configurable:!0});import{c as a}from"./clsx.m.256e9345.js";import{$ as e}from"./index.module.55ede37f.js";import{j as x}from"./jsx-runtime.7d5ae9e3.js";function l({size:t="md",children:m,asChild:s,className:c}){return x(s?e:"span",{className:a("text-gray-100 font-sans",{"text-xs":t==="sm","text-sm":t==="md","text-md":t==="lg"},c),children:m})}o(l,"Text");export{l as T};
+//# sourceMappingURL=Text.f244ba02.js.map
