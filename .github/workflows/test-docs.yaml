@@ -1,0 +1,36 @@
+name: Deploy Storybook
+
+name: Workflow Dispatch
+
+on:
+  workflow_dispatch:
+    inputs:
+      input:
+        description: "Test"
+        required: false
+        default: "test"
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    env:
+      NODE_OPTIONS: --max-old-space-size=6144
+      GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
+      
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - run: echo "💡 The ${{ github.path }} "
+    - run: echo "💡 The ${{ runner.temp }} "
+    - run: echo "💡 The ${{ github.workspace }} "
+
+    - name: Setup NodeJS
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+    
+    - name: Install dependencies w/o changing -lock.json
+      run: npm ci --legacy-peer-deps
+
+    - name: Test  
+      run: : npx http-server /home/runner/work/Design-System-Storybook/Design-System-Storybook/storybook-static --port 6006 --silent
