@@ -33,4 +33,4 @@ jobs:
       run: npm ci --legacy-peer-deps
 
     - name: Test  
-      run: : npx http-server /home/runner/work/Design-System-Storybook/Design-System-Storybook/storybook-static --port 6006 --silent
+      run: : "npx http-server /home/runner/work/Design-System-Storybook/Design-System-Storybook/storybook-static --port 6006 --silent"
