@@ -20,9 +20,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
-    - run: echo "💡 The ${{ github.path }} "
-    - run: echo "💡 The ${{ runner.temp }} "
-    - run: echo "💡 The ${{ github.workspace }} "
 
     - name: Setup NodeJS
       uses: actions/setup-node@v3
@@ -31,6 +28,33 @@ jobs:
     
     - name: Install dependencies w/o changing -lock.json
       run: npm ci --legacy-peer-deps
+      
+    - name:
+      run: npm run build-storybook
 
     - name: Test  
-      run: : "npx http-server /home/runner/work/Design-System-Storybook/Design-System-Storybook/storybook-static --port 6006 --silent"
+      uses: Eun/http-server-action@v1
+      with:
+        directory: ${{ github.workspace }}/storybook-static
+        port: 6006
+        no-cache: false
+        index-files: |
+          ["index.html", "index.htm"]
+        allowed-methods: |
+          ["GET", "HEAD","POST"]
+        content-types: |
+          {
+            "appcache": "text/cache-manifest",
+            "css": "text/css",
+            "gif": "image/gif",
+            "html": "text/html",
+            "ico": "image/x-icon",
+            "jpeg": "image/jpeg",
+            "jpg": "image/jpeg",
+            "js": "text/javascript",
+            "json": "application/json",
+            "png": "image/png",
+            "txt": "text/plain",
+            "xml": "text/xml",
+            "svg": "image/svg+xml"
+          }
