@@ -57,9 +57,5 @@ jobs:
             "svg": "image/svg+xml"
           }
 
-    - uses: ifaxity/wait-on-action
-      with:
-        resource: http://localhost:6006
-
     - name: Run tests
       run: npm run test-storybook -- --ci
